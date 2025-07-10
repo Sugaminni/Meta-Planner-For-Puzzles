@@ -1,6 +1,6 @@
 # Intelligent Puzzle Solver
 
-An AI puzzle solver that decides whether to use BFS or A* for solving puzzles like the N-Puzzle.
+An AI puzzle solver that decides whether to use BFS, A*, or UCS for solving puzzles like the N-Puzzle.
 
 ---
 

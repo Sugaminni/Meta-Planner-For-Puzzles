@@ -1,2 +1,3 @@
-public class Solver {
+public interface Solver {
+    Solution solve(Puzzle puzzle);
 }

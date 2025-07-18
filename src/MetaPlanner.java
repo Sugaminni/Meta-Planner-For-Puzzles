@@ -1,3 +1,5 @@
+import java.util.Random;
+
 // Chooses the best algorithm for solving the puzzle
 public class MetaPlanner {
     private final Solver bfsSolver;
@@ -28,12 +30,14 @@ public class MetaPlanner {
     private Solver chooseSolver(Puzzle puzzle) {
         int size = puzzle.getStartState().tiles.length;
 
-        if (size <= 9) {
-            return bfsSolver;
-        } else if (size <= 15) {
-            return ucsSolver;
+        Random rand = new Random();
+
+        if (size <= 6) {
+            return bfsSolver; // Shallow puzzles
+        } else if (size <= 12) { // "Coin Tosses" because 8 tile puzzles are often in UCS(rand makes program randomly choose UCS or A*)
+            return (rand.nextDouble() < 0.5) ? ucsSolver : aStarSolver;
         } else {
-            return aStarSolver;
+            return aStarSolver; // Complex puzzles
         }
     }
 }

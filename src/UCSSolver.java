@@ -1,10 +1,10 @@
 import java.util.*;
 
-// Implements Uniform Cost Search (UCS)
-public class UCS implements Solver {
+// Implements Uniform Cost Search (UCSSolver)
+public class UCSSolver implements Solver {
     @Override
     public Solution solve(Puzzle puzzle) {
-        System.out.println("Thinking (UCS)...");
+        System.out.println("Thinking (UCSSolver)...");
 
         // Starting point
         PuzzleState start = puzzle.getStartState();
@@ -29,7 +29,7 @@ public class UCS implements Solver {
             steps++;
 
             if (steps % 1000 == 0) {
-                System.out.println("UCS expanded " + steps + " states...");
+                System.out.println("UCSSolver expanded " + steps + " states...");
             }
 
             // Checks for finish state
@@ -73,7 +73,7 @@ public class UCS implements Solver {
         return new Solution(path, steps);
     }
 
-    // Inner class representing a node in the UCS priority queue
+    // Inner class representing a node in the UCSSolver priority queue
     private static class Node {
         PuzzleState state;
         int cost;

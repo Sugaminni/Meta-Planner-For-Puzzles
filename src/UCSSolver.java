@@ -1,10 +1,10 @@
 import java.util.*;
 
-// Implements Uniform Cost Search (UCSSolver)
+// Implements Uniform Cost Search
 public class UCSSolver implements Solver {
     @Override
     public Solution solve(Puzzle puzzle) {
-        System.out.println("Thinking (UCSSolver)...");
+        System.out.println("We'll use Uniform Cost Search to solve this puzzle!");
 
         // Starting point
         PuzzleState start = puzzle.getStartState();

@@ -4,7 +4,7 @@ import java.util.*;
 public class BFSSolver implements Solver {
     @Override
     public Solution solve(Puzzle puzzle) {
-        System.out.println("Thinking (BFS)...");
+        System.out.println("We'll use Breadth-first search to solve this puzzle!");
         PuzzleState start = puzzle.getStartState();
 
         Queue<PuzzleState> queue = new LinkedList<>();

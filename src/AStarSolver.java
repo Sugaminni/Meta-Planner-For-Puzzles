@@ -4,7 +4,7 @@ import java.util.*;
 public class AStarSolver implements Solver {
     @Override
     public Solution solve(Puzzle puzzle) {
-        System.out.println("Thinking (A*)...");
+        System.out.println("We'll use A* to solve this puzzle!");
         PuzzleState start = puzzle.getStartState();
 
         PriorityQueue<Node> open = new PriorityQueue<>(Comparator.comparingInt(n -> n.f));
